@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using TodoApi.Models;
+using Microsoft.AspNetCore.Http;
+
 
 namespace TodoApi.Controllers
 {
@@ -34,13 +36,19 @@ namespace TodoApi.Controllers
 
         
         [HttpGet("{id}", Name = "GetTodo")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Error))]
         public ActionResult<TodoItem> GetById(long id)
         {
             var item = _context.TodoItems.Find(id);
 
             if (item == null)
             {
-                return NotFound();
+                return NotFound(new Error
+                {
+                    Code = 123,
+                    Message = $"an item with the id {id} doesn't exist"
+                });
             }
 
             return item;
