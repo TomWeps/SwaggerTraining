@@ -1,39 +1,34 @@
-# SwaggerTraining
+# Swagger (OpenApi) & Tools - Usage Examples
 
-## To highlit
-- swagger's optional options / customization
-- Authentication
+## Swashbuckle: Swagger Generator
+[MSDN: Get started with Swashbuckle and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio)
 
-- Good practices
-  - describe controlers actions
-	ProducesResponseType 
+Worth to know:
+- A lot of customization and extension possibilities - see Swagger Setup
+https://github.com/domaindrivendev/Swashbuckle.AspNetCore
+- `[ProducesResponseType(StatusCodes.Status..., Type = typeof(IfAnotherTypeIsReturned))]`
+- `[Produces("application/json")]` usually better set globally
+- Comments for actions and DTO objects
+- DataAnnotations can be used too (like required, default)
+- Other comment type - 'Example'
+- Enums Customizations
+  - swagger Configuration `DescribeAllEnumsAsStrings()`
+  - `[JsonConverter(typeof(StringEnumConverter))]`
+  - `[EnumMember(Value="CustomEnumStringValue")]`
+   
 
-  - enums as strings
-	- Swagger Configuration DescribeAllEnumsAsStrings()
-	- [JsonConverter(typeof(StringEnumConverter))]
-	- EnumMember(Value=”CustomString”)]
-  - [Produces("application/json")] - as global
-  - DataAnnotations ( required, default)
+## Manifest
+  - Can be used by a variety of rest clients (for example Postman)
+  - https://swagger.io/docs/specification/2-0/basic-structure/
 
+## Code Generators
+- [swagger-codegen](https://swagger.io/tools/swagger-codegen/)
+- [NSwagStudio](https://github.com/RicoSuter/NSwag/wiki/NSwagStudio)
+- and more ...
 
+## Moks
+- [stoplight prism](https://stoplight.io/open-source/prism/)
+- and more ...
 
-
-
-# Code Generation
-https://swagger.io/tools/swagger-codegen/
-https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/
-
-#NSwagStudio
-
-#Fakes
-
-- Source Code (Origin)
-https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/tutorials/web-api-help-pages-using-swagger/samples/
-
-MSDN 
-- https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio
-
-
-- NSwag Studio
-https://github.com/RicoSuter/NSwag/wiki/NSwagStudio
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio
+## Others
+- https://swagger.io/tools/
