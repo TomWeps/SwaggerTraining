@@ -36,6 +36,7 @@ bld/
 Generated\ Files/
 Tools/CodegenOutput/*
 Tools/*.jar
+Tools/swagger.json
 
 # MSTest test Results
 [Tt]est[Rr]esult*/

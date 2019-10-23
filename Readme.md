@@ -17,10 +17,15 @@
 
 
 
+
+
 # Code Generation
 https://swagger.io/tools/swagger-codegen/
 https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/
 
+#NSwagStudio
+
+#Fakes
 
 - Source Code (Origin)
 https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/tutorials/web-api-help-pages-using-swagger/samples/
@@ -31,3 +36,4 @@ MSDN
 
 - NSwag Studio
 https://github.com/RicoSuter/NSwag/wiki/NSwagStudio
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-nswag?view=aspnetcore-3.0&tabs=visual-studio

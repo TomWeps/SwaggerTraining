@@ -26,7 +26,7 @@ namespace TodoApi.Models
         /// <summary>
         /// if the task has some time restriction, it has to be accomplished before some time.
         /// </summary>
-        public DateTime Deadline { get; set; }
+        public DateTime? Deadline { get; set; }
         
         [DefaultValue(TodoPriority.Normal)]
         public TodoPriority Priority { get; set; }
