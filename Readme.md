@@ -17,6 +17,10 @@
 
 
 
+# Code Generation
+https://swagger.io/tools/swagger-codegen/
+https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/
+
 
 - Source Code (Origin)
 https://github.com/aspnet/AspNetCore.Docs/tree/master/aspnetcore/tutorials/web-api-help-pages-using-swagger/samples/
