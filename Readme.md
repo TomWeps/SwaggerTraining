@@ -10,6 +10,7 @@
  - OpenAPI 3 - Swagger ver.3 - Swashbuckle (.Net) v5 **RC**
   
    [whats-new-in-openapi-3-0](https://swagger.io/blog/news/whats-new-in-openapi-3-0/)
+   [A Visual Guide to What's New in Swagger 3.0](https://blog.readme.io/an-example-filled-guide-to-swagger-3-2/)
 
 ## Swashbuckle: Swagger Generator
 [MSDN: Get started with Swashbuckle and ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.0&tabs=visual-studio)
