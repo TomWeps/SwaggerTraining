@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using Swashbuckle.AspNetCore.XFaker;
 
 namespace TodoApi.Configuration
 {
@@ -40,6 +42,7 @@ namespace TodoApi.Configuration
 
                 // Enums -> as strings, not int
                 c.DescribeAllEnumsAsStrings();
+                c.SchemaFilter<XFakerSchemaFilter>();
 
             });
         }
@@ -57,5 +60,28 @@ namespace TodoApi.Configuration
                 c.ShowExtensions();
             });
         }
+
+
+        private class XFakerSchemaFilter : ISchemaFilter
+        {
+            public void Apply(Schema schema, SchemaFilterContext context)
+            {
+                foreach (var property in context.SystemType.GetTypeInfo().GetProperties())
+                {
+                    var attributes = property.GetCustomAttributes(inherit: false).OfType<SwaggerXFakerAttribute>();
+                    foreach (SwaggerXFakerAttribute attribute in attributes)
+                    {
+                        string propName = property.Name.Substring(0, 1).ToLower() + property.Name.Remove(0, 1);
+                        Schema propSchema;
+
+                        if (schema.Properties.TryGetValue(propName, out propSchema))
+                        {
+                            propSchema.Extensions.Add("x-faker", attribute.FakeType);
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

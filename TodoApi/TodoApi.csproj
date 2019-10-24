@@ -16,4 +16,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="XFaker.Swashbuckle.AspNetCore">
+      <HintPath>..\Libs\XFaker.Swashbuckle.AspNetCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
