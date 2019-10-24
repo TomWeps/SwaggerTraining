@@ -6,8 +6,8 @@
 
 
 *Versions*
- - OpenAPI 2 - Swagger ver.2 - Swashbuckle (.Net) v4
- - OpenAPI 3 - Swagger ver.3 - Swashbuckle (.Net) v5 **RC**
+ - Swagger ver.2 (OpenAPI 2) - Swashbuckle (.Net) v4
+ - OpenAPI 3 (Swagger ver.3) - Swashbuckle (.Net) v5 **RC**
   
    [whats-new-in-openapi-3-0](https://swagger.io/blog/news/whats-new-in-openapi-3-0/)
    [A Visual Guide to What's New in Swagger 3.0](https://blog.readme.io/an-example-filled-guide-to-swagger-3-2/)
