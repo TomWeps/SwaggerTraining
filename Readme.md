@@ -49,7 +49,6 @@ https://github.com/domaindrivendev/Swashbuckle.AspNetCore
   Run script: `Tools\Invoke-FakeBackend.ps1`
 
 - [Swagmock](https://www.npmjs.com/package/swagmock)
-- [Postman as Mock Server](https://learning.getpostman.com/docs/postman/mock_servers/mocking_with_examples/)
 - and more ...
 
 ## Others

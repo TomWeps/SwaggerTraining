@@ -30,8 +30,8 @@ namespace TodoApi
             })
             .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-                services.ConfigureSwagger();
-            }
+             services.ConfigureSwagger();
+        }
              
         public void Configure(IApplicationBuilder app)
         {
