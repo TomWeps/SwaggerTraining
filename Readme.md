@@ -43,7 +43,7 @@ https://github.com/domaindrivendev/Swashbuckle.AspNetCore
   
 - and more ...
 
-## Moks
+## Mocks
 - [Stoplight Prism](https://stoplight.io/open-source/prism/)
 
   Run script: `Tools\Invoke-FakeBackend.ps1`
